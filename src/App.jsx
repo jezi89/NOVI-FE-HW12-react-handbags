@@ -28,38 +28,22 @@ function App() {
                 ))}
             </main>
             <footer>
-                <section>
-                    <Tile
-                        type={tilesData[0].type}
-                        title={tilesData[0].title}
-                        paragraphs={tilesData[0].paragraphs}
-                        image={tilesData[0].image}
-                    />
-                </section>
-                <section>
-                    <Tile
-                        type={tilesData[1].type}
-                        title={tilesData[1].title}
-                        paragraphs={tilesData[1].paragraphs}
-                        image={tilesData[1].image}
-                    />
-                </section>
-                <section>
-                    <Tile
-                        type={tilesData[2].type}
-                        title={tilesData[2].title}
-                        paragraphs={tilesData[2].paragraphs}
-                        image={tilesData[2].image}
-                    />
-                </section>
-                <section>
-                    <Tile
-                        type={tilesData[3].type}
-                        title={tilesData[3].title}
-                        paragraphs={tilesData[3].paragraphs}
-                        image={tilesData[3].image}
-                    />
-                </section>
+                <Tile
+                    title="The Brand"
+                    paragraphs={tilesData[0].paragraphs}
+                />
+                <Tile
+                    image={tilesData[2].image}
+                    imageDescription="Brand logo"
+                />
+                <Tile
+                    image={tilesData[3].image}
+                    imageDescription="Designers"
+                />
+                <Tile
+                    title="Our Story"
+                    paragraphs={tilesData[1].paragraphs}
+                />
             </footer>
         </>
     );

@@ -1,19 +1,27 @@
-// src/components/Tile.jsx
-function Tile({type, title, paragraphs, image}) {
+import React from 'react';
+
+const renderParagraphs = (paragraphs) => {
+    return paragraphs?.map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+    ));
+};
+
+const Tile = React.memo(({image, imageDescription, title, paragraphs, children}) => {
     return (
-        <>
-            {type === 'text' ? (
+        <section>
+            {image ? (
+                <img src={image} alt={imageDescription}/>
+            ) : (
                 <>
                     <h2>{title}</h2>
-                    {paragraphs.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                    ))}
+                    {children || renderParagraphs(paragraphs)}
                 </>
-            ) : (
-                <img src={image} alt="Brand or designer"/>
             )}
-        </>
+        </section>
     );
-}
+});
+
+Tile.displayName = 'Tile';
+
 
 export default Tile;

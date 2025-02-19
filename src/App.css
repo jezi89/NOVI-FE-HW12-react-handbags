@@ -5,7 +5,7 @@ main {
 }
 
 nav {
-    gap: 12px; /* Optioneel: Voegt ruimte tussen knoppen toe */
+    margin: 24px 0;
 }
 
 footer {
@@ -26,14 +26,14 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 section p {
     max-width: 200px;
 }
 
-
-button, .styled-buttons {
+button {
     border: 1px solid #BC4C2A;
     color: #BC4C2A;
     background-color: transparent;
@@ -43,19 +43,19 @@ button, .styled-buttons {
     cursor: pointer;
 }
 
-button:hover .styled-buttons:hover {
+button:hover {
     background-color: #BC4C2A;
     color: white;
     transition: all .4s ease-in-out;
 }
 
-button:disabled .styled-buttons:disabled {
+button:disabled {
     cursor: not-allowed;
     border-color: #D08169;
     color: #D08169;
 }
 
-button + button .styled-buttons + .styled-buttons {
+button + button {
     margin-left: 12px;
 }
 
